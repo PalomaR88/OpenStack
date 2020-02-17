@@ -128,4 +128,20 @@ Red Hat OpenStack Platform es el soporte que ofrece Red Hat.
 También está: kolla-ansible (utiliza openstack kolla para aplicarle las recetas) y kolla-kubernetes.
 
 
+## Arquitectura de OpenStack
+### Arquitectura
+- ¿Qué máquinas necesitamos?
+- ¿Qué redes físicas/lógicas?
+- ¿Qué componentes se instalan en cada nodo?
+- Rodo esto conforme a: requisitos, costes, rendimmiento, seguridad y escalabilidad. 
+
+**nodo controlador** se define la gestión de recursos. Tiene dos componentes:
+- api
+- scheduler
+**nodo computación**: hipervisores.
+**nodo de red**: se refiere al equipo donde se va a gestionar los router, la ip flotante, etc.
+**nodo de almancenamiento**: depende mucho del sistema de almacenamiento que se va a usar. 
+> Otros para servicios genéricos:
+**nodos para las bases de datos relacionales** normalmente se monta galera, versión de mariaDB que viene configurada como un cluster en modo activo activo. 
+**AMQP** para las colas de mensajes. 
 
